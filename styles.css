@@ -404,9 +404,10 @@ img.avatar{ object-fit:cover; background: var(--surface); }
   margin-top:12px;
   border:1px solid var(--card-border); border-radius:16px;
   overflow:hidden;
+  aspect-ratio: 16 / 9;
   background: var(--surface);
-  padding:16px;
 }
+.post__media a{ display:block; height:100%; }
 
 /* ---------- Link-preview card ---------- */
 .link-card{
@@ -416,8 +417,8 @@ img.avatar{ object-fit:cover; background: var(--surface); }
 }
 .link-card:hover{ background: var(--hover-soft); }
 .link-card__media{
-  height:180px; overflow:hidden;
-  background: var(--surface); padding:20px 24px 0;
+  aspect-ratio: 16 / 9; overflow:hidden;
+  background: var(--surface);
   border-bottom:1px solid var(--card-border);
 }
 .link-card__body{ padding:12px; display:flex; flex-direction:column; gap:2px; }
@@ -441,8 +442,8 @@ a.quote:hover{ background: var(--hover-soft); }
   display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden;
 }
 .quote__media{
-  height:110px; overflow:hidden;
-  background: var(--surface); padding:14px 20px 0;
+  aspect-ratio: 16 / 9; overflow:hidden;
+  background: var(--surface);
   border-top:1px solid var(--card-border);
 }
 .quote--pull .quote__text{
@@ -466,6 +467,8 @@ a.quote:hover{ background: var(--hover-soft); }
 .job-card__body{ display:flex; flex-direction:column; gap:1px; min-width:0; }
 .job-card__company{ font-weight:700; }
 .job-card__date{ display:flex; align-items:center; gap:4px; color: var(--text-muted); font-size:14px; }
+.job-card__site{ display:inline-flex; align-items:center; gap:4px; color: var(--accent); font-size:14px; }
+.job-card__site:hover{ text-decoration:underline; }
 
 /* ---------- Article card (Notes posts) ---------- */
 .article-card{
@@ -520,26 +523,21 @@ a.quote:hover{ background: var(--hover-soft); }
 @keyframes pop{ 50%{ transform: scale(1.25); } }
 
 /* =========================================================
-   MOCK UI PREVIEW (placeholder screenshots)
+   PROJECT MEDIA (site screenshots / branded covers)
 ========================================================= */
-.mock-window{
-  width:100%;
-  border:1px solid var(--border-strong); border-radius:10px;
-  background: var(--bg); overflow:hidden;
+.shot{ display:block; width:100%; height:100%; object-fit:cover; object-position:top center; }
+.cover-art{
+  width:100%; height:100%; padding:16px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;
+  color:#fff; text-align:center;
 }
-.mock-window__bar{ display:flex; gap:5px; padding:8px 10px; border-bottom:1px solid var(--border); }
-.mock-window__bar span{ width:8px; height:8px; border-radius:50%; background: var(--border-strong); }
-.mock-window__bar span:nth-child(1){ background:#ff5f57; }
-.mock-window__bar span:nth-child(2){ background:#febc2e; }
-.mock-window__bar span:nth-child(3){ background:#28c840; }
-.mock-window__body{ display:flex; height:140px; }
-.mock-sidebar{ width:28%; border-right:1px solid var(--border); padding:12px 10px; display:flex; flex-direction:column; gap:8px; }
-.mock-line{ height:6px; width:70%; border-radius:3px; background: var(--border); }
-.mock-line--active{ background: var(--accent); width:85%; }
-.mock-main{ flex:1; padding:12px; display:flex; flex-direction:column; gap:10px; }
-.mock-search{ height:16px; width:60%; border-radius:999px; background: var(--search-bg); }
-.mock-row{ height:12px; width:90%; border-radius:4px; background: var(--surface); border:1px solid var(--border); }
-.mock-row--wide{ width:100%; }
+.cover-art__name{ font-size:28px; font-weight:800; letter-spacing:-0.02em; line-height:1.15; }
+.cover-art__status{
+  font-size:13px; font-weight:700;
+  padding: 4px 12px; border-radius:999px;
+  background: rgba(255,255,255,0.22);
+}
+.quote__media .cover-art__name{ font-size:22px; }
 
 /* =========================================================
    FILTERS / SEARCH / STATUS
@@ -587,7 +585,6 @@ a.quote:hover{ background: var(--hover-soft); }
 .post-detail__head{ display:flex; align-items:center; gap:12px; }
 .post-detail__who{ display:flex; flex-direction:column; flex:1; min-width:0; line-height:1.3; }
 .post-detail__text{ margin-top:12px; font-size:17px; line-height:1.4; white-space:pre-line; overflow-wrap:anywhere; }
-.post-detail__media .mock-window__body{ height:220px; }
 .post-detail__links{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
 .post-detail__meta{
   margin-top:16px; padding:16px 0;
@@ -813,7 +810,6 @@ a.card__row:hover{ background: var(--hover-soft); }
   .profile__actions .btn{ padding: 0 14px; }
   .tab{ padding: 0 10px; }
   .article-card__cover{ width:88px; }
-  .link-card__media{ height:140px; }
   .modal__body{ padding: 8px 20px 24px; }
 }
 

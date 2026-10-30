@@ -6,6 +6,34 @@
   ========================================================= */
   var PROJECTS = [
     {
+      id: "counselconnect",
+      name: "CounselConnect",
+      category: ["building","web"],
+      status: "In progress",
+      desc: "A lawyer locator app that helps people find and connect with the right lawyer.",
+      stack: [],
+      github: "https://github.com/Nana-Kojoo",
+      demo: "#",
+      detail: {
+        overview: "CounselConnect is a lawyer locator app I'm building. It helps people find a lawyer who fits their needs and get in touch with them.",
+        problem: "Finding the right lawyer usually comes down to who you happen to know. There's no simple place to see who practises what, and where."
+      }
+    },
+    {
+      id: "ghana-duty-calculator",
+      name: "Ghana Duty Calculator",
+      category: ["building","web"],
+      status: "In progress",
+      desc: "A calculator that estimates the import duties and taxes payable when bringing goods into Ghana.",
+      stack: [],
+      github: "https://github.com/Nana-Kojoo",
+      demo: "#",
+      detail: {
+        overview: "A duty calculator I'm building for Ghana: enter what you're importing and get an estimate of the duties and taxes before it lands.",
+        problem: "Import duties in Ghana stack several charges on top of each other, so it's hard to know what you'll actually pay until you're at the port."
+      }
+    },
+    {
       id: "onekey",
       name: "ONEKEY",
       category: ["apis","web"],
@@ -15,6 +43,7 @@
       stack: ["React","Flask","PostgreSQL"],
       github: "https://github.com/Nana-Kojoo/onekey1",
       demo: "https://onekey1.vercel.app/",
+      image: "assets/shots/onekey.jpg",
       detail: {
         overview: "ONEKEY started as a personal itch: I was tired of losing track of which API needed which header format. It grew into a small platform for discovering and testing public APIs from one place.",
         problem: "Developers spend a surprising amount of time hunting for API documentation, then testing endpoints across Postman, browser tabs, and half-remembered curl commands.",
@@ -34,6 +63,7 @@
       stack: ["Next.js","Node","MongoDB"],
       github: "https://github.com/Nana-Kojoo/RideFund",
       demo: "https://ridefund.vercel.app/",
+      image: "assets/shots/ridefund.jpg",
       detail: {
         overview: "RideFund is a prototype built after one too many arguments over trotro fares and fuel money in a group chat.",
         problem: "Groups that share rides regularly rarely track who has paid what, so the same few people end up covering costs.",
@@ -47,12 +77,13 @@
       id: "kinkan",
       date: "2023",
       name: "Kinkan Educational Consult",
-      category: ["software","web"],
+      category: ["clients","software","web"],
       status: "Live",
-      desc: "Web presence and internal tools for an educational consultancy in Accra.",
+      desc: "The official website and internal tools for Kinkan, an education support organisation in Accra.",
       stack: ["React","Firebase"],
       github: "https://github.com/Nana-Kojoo",
-      demo: "#",
+      demo: "https://kinkan.org/",
+      image: "assets/shots/kinkan.jpg",
       detail: {
         overview: "A long-running engagement building and maintaining the digital side of an educational consultancy — the public site and a few internal tools for their team.",
         problem: "The consultancy relied on manual spreadsheets and WhatsApp for tracking student applications and consultations.",
@@ -60,6 +91,38 @@
         features: "Applicant tracking, consultation scheduling, and a simple content system so the team can update the public site without my help.",
         challenges: "Building something non-technical staff could actually maintain, which meant resisting the urge to add anything clever.",
         learned: "Good internal tools are judged by how rarely people need to ask you for help."
+      }
+    },
+    {
+      id: "laws-of-beauty",
+      name: "Laws of Beauty Academy",
+      category: ["clients","web"],
+      status: "Live",
+      desc: "The website for Laws of Beauty Academy, a fashion design, beauty and hair school in Accra.",
+      stack: ["HTML/CSS/JS"],
+      github: "https://github.com/Nana-Kojoo",
+      demo: "https://lobaa.vercel.app/",
+      image: "assets/shots/laws-of-beauty.jpg",
+      detail: {
+        overview: "The official website for Laws of Beauty Academy, a fashion design and beauty school in Accra, Ghana.",
+        built: "A responsive site that presents the academy, its courses and its work, and points prospective students to apply for admission.",
+        features: "Course pages for fashion design, cosmetology, hairdressing, beauty, barbering and two-month short courses, a gallery, contact details, and an \"Apply for Admission\" flow."
+      }
+    },
+    {
+      id: "moro-ai",
+      name: "Moro AI",
+      category: ["clients","web"],
+      status: "Live",
+      desc: "An AI writing tool that turns robotic, overly polished text into clear, natural writing that sounds like you.",
+      stack: [],
+      github: "https://github.com/Nana-Kojoo",
+      demo: "https://moro-ai.onrender.com/",
+      image: "assets/shots/moro-ai.jpg",
+      detail: {
+        overview: "Moro AI makes AI writing sound like a person wrote it. It refines tone, clarity and context without losing the writer's voice.",
+        problem: "AI-generated text often reads as stiff and over-polished, which makes it sound off for the audience it's meant for.",
+        features: "A Humanize tool that rewrites text side by side with the original, writing modes for students, professionals, business and personal use, a choice of neutral, formal or friendly tone, and a free trial."
       }
     },
     {
@@ -121,49 +184,49 @@
 
   var FEED = [
     {
+      kind: "Project announcement",
+      date: "Oct 2026",
+      text: "Two things I'm building right now:\n\n⚖️ CounselConnect — a lawyer locator app\n🧮 A Ghana duty calculator\n\nMore soon 👀",
+      quote: { type: "project", id: "counselconnect" }
+    },
+    {
       kind: "Build log",
       date: "Sep 2026",
-      text: "Been working on a cleaner API architecture today.\n\nStill figuring things out. Still shipping.",
-      preview: false
+      text: "Been working on a cleaner API architecture today.\n\nStill figuring things out. Still shipping."
     },
     {
       kind: "Project launch",
       date: "Aug 2026",
       text: "ONEKEY is live. Search, inspect, and test public APIs from one place — built it because I was tired of losing track of headers across six tabs.",
-      preview: false,
       quote: { type: "project", id: "onekey" }
     },
     {
       kind: "Technical note",
       date: "Aug 2026",
-      text: "Spent way too long today debugging an auth issue that turned out to be a trailing slash. Adding that to the list of things I now check first.",
-      preview: false
+      text: "Spent way too long today debugging an auth issue that turned out to be a trailing slash. Adding that to the list of things I now check first."
     },
     {
       kind: "Achievement",
       date: "Jul 2026",
       text: "Wrapped up my internship at NovaCreateHub. Learned more about reading other people's code in three months than I expected to.",
-      preview: false,
       quote: { type: "work", id: "NovaCreateHub" }
     },
     {
       kind: "Screenshot",
       date: "Jul 2026",
       text: "Early look at the RideFund group balance screen. Still deciding if the split logic needs a manual override.",
-      preview: true
+      media: "ridefund"
     },
     {
       kind: "Project announcement",
       date: "Jun 2026",
       text: "Starting a small experiment: a ticketing flow with live seat holds. Mostly curious how far I can push the concurrency handling before it breaks.",
-      preview: false,
       quote: { type: "project", id: "presto-tickets" }
     },
     {
       kind: "Text update",
       date: "Jun 2026",
-      text: "Reminder to self: not every project needs a database on day one.",
-      preview: false
+      text: "Reminder to self: not every project needs a database on day one."
     }
   ];
 
@@ -187,13 +250,15 @@
       company: "Freelance",
       role: "Web & Software Development",
       date: "2025 – Present",
-      desc: "Small websites, internal tools, and the occasional API for local clients. Mostly word-of-mouth work.",
-      tags: ["React","Flask"]
+      desc: "Websites, internal tools, and the occasional API for local clients. Recent client sites include Laws of Beauty Academy and Moro AI.",
+      tags: ["React","Flask"],
+      quote: { type: "project", id: "laws-of-beauty" }
     },
     {
       company: "Kinkan Educational Consult",
       role: "Software Developer / Consultant",
       date: "2023 – Present",
+      website: "https://kinkan.org/",
       desc: "A long-running relationship — building and maintaining their digital tools as the consultancy has grown.",
       tags: ["Firebase","React"],
       quote: { type: "project", id: "kinkan" }
@@ -380,10 +445,17 @@
     var active = status === 'Active' || status === 'Live';
     return '<span class="status-pill' + (active ? ' status-pill--active' : '') + '">' + status + '</span>';
   }
-  function mockPreview(){
-    return '<div class="mock-window"><div class="mock-window__bar"><span></span><span></span><span></span></div>' +
-      '<div class="mock-window__body"><div class="mock-sidebar"><div class="mock-line"></div><div class="mock-line mock-line--active"></div><div class="mock-line"></div><div class="mock-line"></div></div>' +
-      '<div class="mock-main"><div class="mock-search"></div><div class="mock-row"></div><div class="mock-row"></div><div class="mock-row mock-row--wide"></div></div></div></div>';
+  // A screenshot of the live site, or a branded cover for projects without one.
+  function projectMedia(p){
+    if(p.image){
+      return '<img class="shot" src="' + p.image + '" alt="Screenshot of the ' + p.name + ' website" width="1200" height="675" loading="lazy" decoding="async">';
+    }
+    var pick = 0;
+    for(var i = 0; i < p.id.length; i++){ pick = (pick + p.id.charCodeAt(i)) % ARTICLE_COVERS.length; }
+    return '<div class="cover-art" style="background:' + ARTICLE_COVERS[pick] + '">' +
+      '<span class="cover-art__name">' + p.name + '</span>' +
+      '<span class="cover-art__status">' + p.status + '</span>' +
+    '</div>';
   }
   function verifiedBadge(){
     return '<span class="verified-wrap" title="Verified account">' + icon('verified', 18, 'verified') + '<span class="sr-only">Verified account</span></span>';
@@ -393,6 +465,15 @@
   }
 
   // Stack names as clickable hashtags; "HTML/CSS/JS" becomes three tags.
+  function withTags(text, tags){
+    return tags && tags.length ? text + '\n\n' + hashtags(tags) : text;
+  }
+  function siteUrl(p){
+    return p.demo && p.demo !== '#' ? p.demo : p.github;
+  }
+  function hostOf(url){
+    return url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+  }
   function hashtags(tags){
     var out = [];
     tags.forEach(function(t){ t.split('/').forEach(function(part){ out.push(part); }); });
@@ -479,7 +560,7 @@
   function quoteData(ref){
     if(ref.type === 'project'){
       var p = findProject(ref.id);
-      return p && { href: '#/project/' + p.id, date: p.date || p.status, text: p.name + ' — ' + p.desc, media: mockPreview() };
+      return p && { href: '#/project/' + p.id, date: p.date || p.status, text: p.name + ' — ' + p.desc, media: projectMedia(p) };
     }
     if(ref.type === 'work'){
       var w = findWork(ref.id);
@@ -509,11 +590,11 @@
 
   function projectCard(p){
     return '<a class="link-card" href="#/project/' + p.id + '">' +
-      '<div class="link-card__media" aria-hidden="true">' + mockPreview() + '</div>' +
+      '<div class="link-card__media">' + projectMedia(p) + '</div>' +
       '<div class="link-card__body">' +
-        '<span class="link-card__domain">' + p.github.replace(/^https?:\/\//, '') + '</span>' +
+        '<span class="link-card__domain">' + hostOf(siteUrl(p)) + '</span>' +
         '<span class="link-card__title">' + p.name + ' ' + statusPill(p.status) + '</span>' +
-        '<span class="link-card__desc">' + p.stack.join(' · ') + '</span>' +
+        (p.stack.length ? '<span class="link-card__desc">' + p.stack.join(' · ') + '</span>' : '') +
       '</div>' +
     '</a>';
   }
@@ -525,6 +606,7 @@
         '<span class="job-card__company">' + w.company + '</span>' +
         '<span class="job-card__role">' + w.role + '</span>' +
         '<span class="job-card__date">' + icon('calendar', 14) + w.date + '</span>' +
+        (w.website ? '<a class="job-card__site" href="' + w.website + '" target="_blank" rel="noopener">' + icon('link', 14) + hostOf(w.website) + '</a>' : '') +
       '</span>' +
     '</div>';
   }
@@ -550,7 +632,7 @@
       date: p.date,
       context: { icon: 'rocket', label: 'Featured project' },
       href: '#/project/' + p.id,
-      text: 'Introducing ' + p.name + ' — ' + p.desc + '\n\n' + hashtags(p.stack),
+      text: withTags('Introducing ' + p.name + ' — ' + p.desc, p.stack),
       body: projectCard(p)
     });
     document.getElementById('feedList').innerHTML = githubPinned() + featured + FEED.map(function(item, i){
@@ -560,7 +642,7 @@
         date: item.date,
         context: kindIcon ? { icon: kindIcon, label: item.kind } : null,
         text: item.text,
-        body: (item.preview ? '<div class="post__media" aria-hidden="true">' + mockPreview() + '</div>' : '') + quoteCard(item.quote)
+        body: (item.media ? '<div class="post__media">' + projectMedia(findProject(item.media)) + '</div>' : '') + quoteCard(item.quote)
       });
     }).join('');
   }
@@ -575,7 +657,7 @@
         id: 'work-' + w.company,
         date: w.date,
         context: { icon: 'briefcase', label: current ? 'Current role' : 'Past role' },
-        text: w.desc + '\n\n' + hashtags(w.tags),
+        text: withTags(w.desc, w.tags),
         body: jobCard(w) + quoteCard(w.quote)
       });
     }).join('');
@@ -591,7 +673,7 @@
       id: 'project-' + p.id,
       date: p.date,
       href: '#/project/' + p.id,
-      text: p.name + ' — ' + p.desc + '\n\n' + hashtags(p.stack),
+      text: withTags(p.name + ' — ' + p.desc, p.stack),
       body: projectCard(p)
     });
   }
@@ -1001,8 +1083,8 @@
         text: 'My stack right now:\n\n' + hashtags(['JavaScript','React','Next.js','Python','Flask','PostgreSQL'])
       },
       {
-        text: 'Currently 👇\n\n📚 Learning: system design, properly this time\n🛠 Building: ONEKEY v2\n👀 Interested in: developer tools, API design',
-        body: quoteCard({ type: 'project', id: FEATURED_ID })
+        text: 'Currently 👇\n\n📚 Learning: system design, properly this time\n🛠 Building: CounselConnect and a Ghana duty calculator\n👀 Interested in: developer tools, API design',
+        body: quoteCard({ type: 'project', id: 'counselconnect' })
       },
       {
         text: "That's me. If you're working on something interesting, I'd love to hear about it.",
@@ -1043,14 +1125,19 @@
       ['What I built', d.built],
       ['Key features', d.features],
       ['Challenges', d.challenges]
-    ];
-    var total = sections.length + 1;
+    ].filter(function(sec){ return sec[1]; });
+    var total = sections.length + (d.learned ? 1 : 0);
     topName.textContent = 'Post';
     topSub.textContent = p.name;
     document.title = p.name + ' — Asare Elvis Kojo';
 
+    var isClient = p.category.indexOf('clients') !== -1;
     var demo = p.demo && p.demo !== '#'
-      ? '<a class="btn btn--accent" href="' + p.demo + '" target="_blank" rel="noopener">' + icon('external', 16) + 'Live demo</a>'
+      ? '<a class="btn btn--accent" href="' + p.demo + '" target="_blank" rel="noopener">' + icon('external', 16) + (isClient ? 'Visit website' : 'Live demo') + '</a>'
+      : '';
+    // Only link GitHub when the project has its own repo, not just the profile.
+    var repo = p.github && p.github !== SITE.links.github
+      ? '<a class="btn btn--outline" href="' + p.github + '" target="_blank" rel="noopener">' + icon('github', 16) + 'View on GitHub</a>'
       : '';
 
     var replies = sections.map(function(s, i){
@@ -1058,14 +1145,14 @@
         id: 'reply-' + p.id + '-' + i,
         date: p.date,
         text: '<strong class="post__label">' + (i + 1) + '/' + total + ' · ' + s[0] + '</strong>\n' + s[1],
-        thread: true
+        thread: i < total - 1
       });
-    }).join('') + post({
+    }).join('') + (d.learned ? post({
       id: 'reply-' + p.id + '-learned',
       date: p.date,
       text: '<strong class="post__label">' + total + '/' + total + ' · What I learned</strong>\nIf I had to sum up building ' + p.name + ' in one line:',
       body: quoteCard({ type: 'text', text: '“' + d.learned + '”', date: p.date })
-    });
+    }) : '');
 
     body.innerHTML =
       '<article class="post-detail">' +
@@ -1073,12 +1160,11 @@
           '<div class="post-detail__who"><span class="post__name">' + NAME + ' ' + verifiedBadge() + '</span><span class="post__handle">' + HANDLE + '</span></div>' +
           statusPill(p.status) +
         '</div>' +
-        '<p class="post-detail__text">' + p.name + ' — ' + p.desc + '\n\n' + hashtags(p.stack) + '</p>' +
-        '<div class="post__media post-detail__media" aria-hidden="true">' + mockPreview() + '</div>' +
-        '<div class="post-detail__links">' +
-          '<a class="btn btn--outline" href="' + p.github + '" target="_blank" rel="noopener">' + icon('github', 16) + 'View on GitHub</a>' +
-          demo +
-        '</div>' +
+        '<p class="post-detail__text">' + withTags(p.name + ' — ' + p.desc, p.stack) + '</p>' +
+        '<div class="post__media post-detail__media">' + (p.demo && p.demo !== '#' && p.image
+          ? '<a href="' + p.demo + '" target="_blank" rel="noopener">' + projectMedia(p) + '</a>'
+          : projectMedia(p)) + '</div>' +
+        (repo || demo ? '<div class="post-detail__links">' + repo + demo + '</div>' : '') +
         '<div class="post-detail__meta">' + [p.date, 'Project', p.status].filter(Boolean).join(' · ') + '</div>' +
         postActions('project-' + p.id) +
       '</article>' +
