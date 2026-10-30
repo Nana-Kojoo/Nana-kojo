@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nana-kojo.vercel.app/sitemap.xml
