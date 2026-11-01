@@ -1613,7 +1613,8 @@
 
   function setActiveNav(name){
     Array.prototype.forEach.call(document.querySelectorAll('[data-nav]'), function(a){
-      var on = a.getAttribute('data-nav') === name;
+      var also = (a.getAttribute('data-nav-also') || '').split(' ');
+      var on = a.getAttribute('data-nav') === name || (!!name && also.indexOf(name) !== -1);
       a.classList.toggle('is-active', on);
       if(on){ a.setAttribute('aria-current', 'page'); } else { a.removeAttribute('aria-current'); }
     });
