@@ -97,14 +97,15 @@
       id: "laws-of-beauty",
       name: "Laws of Beauty Academy",
       category: ["clients","web"],
-      status: "Live",
+      status: "Completed",
+      date: "Nov 2026",
       desc: "The website for Laws of Beauty Academy, a fashion design, beauty and hair school in Accra.",
       stack: ["HTML/CSS/JS"],
       github: "https://github.com/Nana-Kojoo",
-      demo: "https://lobaa.vercel.app/",
+      demo: "https://www.lawsofbeautyacademy.com/",
       image: "assets/shots/laws-of-beauty.jpg",
       detail: {
-        overview: "The official website for Laws of Beauty Academy, a fashion design and beauty school in Accra, Ghana.",
+        overview: "The official website for Laws of Beauty Academy, a fashion design and beauty school in Accra, Ghana. Completed and handed over — now live on the academy's own domain, lawsofbeautyacademy.com.",
         built: "A responsive site that presents the academy, its courses and its work, and points prospective students to apply for admission.",
         features: "Course pages for fashion design, cosmetology, hairdressing, beauty, barbering and two-month short courses, a gallery, contact details, and an \"Apply for Admission\" flow."
       }
@@ -184,6 +185,12 @@
 
   var FEED = [
     {
+      kind: "Achievement",
+      date: "Nov 2026",
+      text: "Wrapped up the Laws of Beauty Academy website 🎉\n\nIt's now live on its own domain — <a class=\"hashlink\" href=\"https://www.lawsofbeautyacademy.com/\" target=\"_blank\" rel=\"noopener\">lawsofbeautyacademy.com</a> — and the client is super happy with the results. Projects like this are why I love building for real businesses.",
+      quote: { type: "project", id: "laws-of-beauty" }
+    },
+    {
       kind: "Project announcement",
       date: "Oct 2026",
       text: "Two things I'm building right now:\n\n⚖️ CounselConnect — a lawyer locator app\n🧮 A Ghana duty calculator\n\nMore soon 👀",
@@ -250,7 +257,7 @@
       company: "Freelance",
       role: "Web & Software Development",
       date: "2025 – Present",
-      desc: "Websites, internal tools, and the occasional API for local clients. Recent client sites include Laws of Beauty Academy and Moro AI.",
+      desc: "Websites, internal tools, and the occasional API for local clients. Recent client sites include <a class=\"hashlink\" href=\"https://www.lawsofbeautyacademy.com/\" target=\"_blank\" rel=\"noopener\">Laws of Beauty Academy</a> and <a class=\"hashlink\" href=\"https://moro-ai.onrender.com/\" target=\"_blank\" rel=\"noopener\">Moro AI</a>.",
       tags: ["React","Flask"],
       quote: { type: "project", id: "laws-of-beauty" }
     },
@@ -326,6 +333,70 @@
     whatsappGreeting: "Hi Asare, I came across your website and wanted to reach out."
   };
 
+  /* =========================================================
+     PRICING — packages shown on the Pricing page (#/pricing)
+  ========================================================= */
+  var PRICING = {
+    currency: "GH₵",
+    note: "Prices are starting points. Every project begins with a free consultation, and the final price is confirmed in a written quote before any work starts.",
+    plans: [
+      {
+        id: "basic",
+        name: "Basic",
+        price: "3,000",
+        tagline: "A clean, professional website to get your business online.",
+        features: [
+          "Up to 5 pages",
+          "Mobile-friendly, responsive design",
+          "Contact form and WhatsApp chat button",
+          "Basic SEO so people can find you on Google",
+          "Help setting up your domain and hosting",
+          "Links to your social media"
+        ],
+        timeline: "1–2 weeks",
+        support: "1 month",
+        revisions: "2 rounds"
+      },
+      {
+        id: "advanced",
+        name: "Advanced",
+        badge: "Most popular",
+        price: "7,500",
+        tagline: "A custom website with the features a growing business needs.",
+        includes: "Basic",
+        features: [
+          "Up to 10 pages with a custom design",
+          "Gallery, courses, menu or services pages",
+          "Admissions, booking or enquiry forms",
+          "Content you can update yourself",
+          "Google Business Profile and analytics setup",
+          "Speed and performance optimisation"
+        ],
+        timeline: "3–4 weeks",
+        support: "3 months",
+        revisions: "3 rounds"
+      },
+      {
+        id: "pro",
+        name: "Pro",
+        price: "15,000",
+        tagline: "A full web app or product, built to grow with you.",
+        includes: "Advanced",
+        features: [
+          "Custom web application or SaaS product",
+          "User accounts, dashboards and an admin panel",
+          "Online payments with Paystack",
+          "Database and API integrations",
+          "AI features where they genuinely help",
+          "Launch support and handover documentation"
+        ],
+        timeline: "6+ weeks",
+        support: "6 months",
+        revisions: "Per milestone"
+      }
+    ]
+  };
+
   var NAME = SITE.name;
   var HANDLE = SITE.handle;
   var EMAIL = SITE.email;
@@ -385,6 +456,8 @@
     trophy: '<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.7V17c0 .6-.5 1-1 1.2C7.9 18.8 7 20.2 7 22M14 14.7V17c0 .6.5 1 1 1.2 1.2.6 2 2 2 3.8M18 2H6v7a6 6 0 0 0 12 0z"/>',
     image: '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/>',
     megaphone: '<path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>',
+    tag: '<path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/>',
+    check: '<path d="M20 6 9 17l-5-5"/>',
     bulb: '<path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V18h6v-1.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/>',
     github: '<path d="M12 .5C5.73.5.98 5.24.98 11.5c0 4.99 3.24 9.22 7.73 10.72.56.1.77-.24.77-.54 0-.27-.01-1.16-.02-2.1-3.14.68-3.81-1.34-3.81-1.34-.51-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.51-.29-5.14-1.25-5.14-5.58 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.45.11-3.02 0 0 .95-.3 3.11 1.16a10.8 10.8 0 0 1 5.66 0c2.16-1.46 3.11-1.16 3.11-1.16.61 1.57.23 2.73.11 3.02.72.79 1.16 1.8 1.16 3.03 0 4.34-2.64 5.29-5.15 5.57.41.35.77 1.04.77 2.1 0 1.52-.01 2.74-.01 3.11 0 .3.2.65.78.54A10.51 10.51 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5z"/>',
     verified: '<path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.68-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"/>',
@@ -442,13 +515,16 @@
     return WORK.filter(function(w){ return w.company === company; })[0];
   }
   function statusPill(status){
-    var active = status === 'Active' || status === 'Live';
+    var active = status === 'Active' || status === 'Live' || status === 'Completed';
     return '<span class="status-pill' + (active ? ' status-pill--active' : '') + '">' + status + '</span>';
   }
-  // A screenshot of the live site, or a branded cover for projects without one.
+  // A live screenshot of the project's site (via /api/shot, refreshed every
+  // 12 hours), falling back to the saved image; or a branded cover if there's no site.
   function projectMedia(p){
     if(p.image){
-      return '<img class="shot" src="' + p.image + '" alt="Screenshot of the ' + p.name + ' website" width="1200" height="675" loading="lazy" decoding="async">';
+      return '<img class="shot" src="/api/shot?id=' + p.id + '"' +
+        ' onerror="this.onerror=null;this.src=\'' + p.image + '\'"' +
+        ' alt="Screenshot of the ' + p.name + ' website" width="1200" height="675" loading="lazy" decoding="async">';
     }
     var pick = 0;
     for(var i = 0; i < p.id.length; i++){ pick = (pick + p.id.charCodeAt(i)) % ARTICLE_COVERS.length; }
@@ -472,7 +548,7 @@
     return p.demo && p.demo !== '#' ? p.demo : p.github;
   }
   function hostOf(url){
-    return url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+    return url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
   }
   function hashtags(tags){
     var out = [];
@@ -1429,6 +1505,85 @@
   });
 
   /* =========================================================
+     PRICING PAGE (like X's Premium tiers)
+  ========================================================= */
+  var selectedPlan = 'advanced';
+
+  function planEnquiry(plan){
+    var subject = 'Website project — ' + plan.name + ' package';
+    var body = 'Hi Asare,\n\nI\'m interested in the ' + plan.name + ' package. Here\'s a bit about my project:\n\n';
+    return 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  }
+
+  function planWhatsApp(plan){
+    if(!SITE.whatsapp) return '';
+    var text = 'Hi Asare, I\'m interested in the ' + plan.name + ' website package.';
+    return '<a class="btn btn--whatsapp btn--lg" href="https://wa.me/' + SITE.whatsapp + '?text=' + encodeURIComponent(text) + '" target="_blank" rel="noopener">' +
+      icon('whatsapp', 18) + 'Chat on WhatsApp</a>';
+  }
+
+  function clientWork(){
+    return PROJECTS.filter(function(p){ return p.category.indexOf('clients') !== -1; }).map(function(p){
+      return '<a class="client-row" href="#/project/' + p.id + '">' +
+        '<span class="client-row__thumb" aria-hidden="true">' + projectMedia(p) + '</span>' +
+        '<span class="client-row__body">' +
+          '<span class="client-row__name">' + p.name + '</span>' +
+          '<span class="client-row__host">' + hostOf(siteUrl(p)) + '</span>' +
+        '</span>' +
+        statusPill(p.status) +
+      '</a>';
+    }).join('');
+  }
+
+  function renderPricing(){
+    var plan = PRICING.plans.filter(function(p){ return p.id === selectedPlan; })[0];
+    document.getElementById('pricing').innerHTML =
+      '<div class="pricing__intro">' +
+        '<h1>Let\'s build something great</h1>' +
+        '<p>Websites and web apps for businesses, schools and startups. Pick a package to see what\'s included.</p>' +
+      '</div>' +
+      '<div class="plans" role="radiogroup" aria-label="Packages">' + PRICING.plans.map(function(p){
+        var on = p.id === selectedPlan;
+        return '<button class="plan' + (on ? ' is-selected' : '') + '" type="button" role="radio" aria-checked="' + on + '" data-plan="' + p.id + '">' +
+          (p.badge ? '<span class="plan__badge">' + p.badge + '</span>' : '') +
+          '<span class="plan__name">' + p.name + '</span>' +
+          '<span class="plan__price"><small>from</small> ' + PRICING.currency + ' ' + p.price + '</span>' +
+          '<span class="plan__tagline">' + p.tagline + '</span>' +
+        '</button>';
+      }).join('') + '</div>' +
+      '<section class="plan-detail" aria-live="polite">' +
+        '<h2>' + plan.name + ' includes</h2>' +
+        (plan.includes ? '<p class="plan-detail__includes">Everything in ' + plan.includes + ', plus:</p>' : '') +
+        '<ul class="plan-features">' + plan.features.map(function(f){
+          return '<li>' + icon('check', 18) + '<span>' + f + '</span></li>';
+        }).join('') + '</ul>' +
+        '<dl class="plan-facts">' +
+          '<div><dt>Timeline</dt><dd>' + plan.timeline + '</dd></div>' +
+          '<div><dt>Support</dt><dd>' + plan.support + '</dd></div>' +
+          '<div><dt>Revisions</dt><dd>' + plan.revisions + '</dd></div>' +
+        '</dl>' +
+        '<div class="plan-cta">' +
+          '<a class="btn btn--accent btn--lg" href="' + planEnquiry(plan) + '">Get started with ' + plan.name + '</a>' +
+          planWhatsApp(plan) +
+          '<button class="btn btn--outline btn--lg" type="button" data-open-contact>Ask a question</button>' +
+        '</div>' +
+      '</section>' +
+      '<p class="pricing__note">' + PRICING.note + ' See the <a class="hashlink" href="#/terms">Terms</a>.</p>' +
+      '<section class="pricing__work">' +
+        '<h2>Recent client work</h2>' +
+        clientWork() +
+      '</section>';
+  }
+
+  document.getElementById('pricing').addEventListener('click', function(e){
+    var btn = e.target.closest('[data-plan]');
+    if(!btn) return;
+    selectedPlan = btn.getAttribute('data-plan');
+    renderPricing();
+    this.querySelector('[data-plan="' + selectedPlan + '"]').focus();
+  });
+
+  /* =========================================================
      ROUTING — profile (#posts…#about), project (#/project/id), messages (#/messages)
   ========================================================= */
   var profileView = document.getElementById('profileView');
@@ -1436,7 +1591,9 @@
   var VIEWS = {
     profile: profileView,
     project: document.getElementById('projectDetail'),
-    messages: document.getElementById('messagesView')
+    messages: document.getElementById('messagesView'),
+    terms: document.getElementById('termsView'),
+    pricing: document.getElementById('pricingView')
   };
   var DEFAULT_TITLE = document.title;
   var currentView = 'profile';
@@ -1485,12 +1642,26 @@
     var hash = location.hash;
     var project = hash.match(/^#\/project\/([a-z0-9-]+)/i);
 
-    if(project || hash === '#/messages'){
+    var page = hash === '#/messages' ? 'messages'
+      : hash === '#/pricing' ? 'pricing'
+      : (hash === '#/terms' || hash === '#/privacy') ? 'terms'
+      : null;
+
+    if(project || page){
       if(currentView === 'profile') profileScroll = window.scrollY;
       if(project){
         currentView = 'project';
         renderProjectDetail(project[1]);
         setActiveNav('projects');
+      } else if(page === 'pricing'){
+        currentView = 'pricing';
+        document.title = 'Pricing — ' + NAME;
+        setActiveNav('pricing');
+        renderPricing();
+      } else if(page === 'terms'){
+        currentView = 'terms';
+        document.title = 'Terms & Privacy — ' + NAME;
+        setActiveNav(null);
       } else {
         currentView = 'messages';
         document.title = 'Messages — ' + NAME;
@@ -1501,7 +1672,11 @@
         }
       }
       showView(currentView);
-      window.scrollTo(0, 0);
+      if(hash === '#/privacy'){
+        document.getElementById('privacy').scrollIntoView();
+      } else {
+        window.scrollTo(0, 0);
+      }
       return;
     }
 
@@ -1532,6 +1707,12 @@
     location.hash = '#projects';
   });
   document.getElementById('backFromMessages').addEventListener('click', function(){
+    location.hash = '#' + lastTab;
+  });
+  document.getElementById('backFromPricing').addEventListener('click', function(){
+    location.hash = '#' + lastTab;
+  });
+  document.getElementById('backFromTerms').addEventListener('click', function(){
     location.hash = '#' + lastTab;
   });
 

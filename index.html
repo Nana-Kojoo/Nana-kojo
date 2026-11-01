@@ -87,6 +87,7 @@
         <a class="nav-item" href="#blogs" data-nav="blogs"><i data-icon="note" data-size="26"></i><span>Blogs</span></a>
         <a class="nav-item" href="#about" data-nav="about"><i data-icon="user" data-size="26"></i><span>About</span></a>
         <a class="nav-item" href="#/messages" data-nav="messages"><i data-icon="mail" data-size="26"></i><span>Messages</span></a>
+        <a class="nav-item" href="#/pricing" data-nav="pricing"><i data-icon="tag" data-size="26"></i><span>Pricing</span></a>
         <button class="nav-item" type="button" data-theme-toggle aria-label="Toggle dark mode">
           <span class="theme-icon theme-icon--sun"><i data-icon="sun" data-size="26"></i></span>
           <span class="theme-icon theme-icon--moon"><i data-icon="moon" data-size="26"></i></span>
@@ -224,7 +225,7 @@
 
       <section class="messages-intro" aria-labelledby="messagesTitle">
         <h1 id="messagesTitle">Say something 👋</h1>
-        <p>Leave a message, share an idea for this site, or just say hi. Please keep it kind — messages are public.</p>
+        <p>Leave a message, share an idea for this site, or just say hi. Please keep it kind — messages are public. By posting, you agree to the <a href="#/terms">Terms</a>.</p>
       </section>
 
       <form class="composer" id="composer" autocomplete="off" novalidate>
@@ -252,12 +253,99 @@
       <div id="messagesList" aria-live="polite"><!-- injected by script.js --></div>
     </div>
 
+    <!-- PRICING PAGE -->
+    <div id="pricingView" hidden>
+      <div class="topbar">
+        <button class="icon-btn topbar__back" type="button" id="backFromPricing" aria-label="Back"><i data-icon="back"></i></button>
+        <div class="topbar__title">
+          <span class="topbar__name">Pricing</span>
+          <span class="topbar__sub">Website &amp; web app packages</span>
+        </div>
+      </div>
+      <div class="pricing" id="pricing"><!-- injected by script.js --></div>
+    </div>
+
+    <!-- TERMS & PRIVACY PAGE -->
+    <div id="termsView" hidden>
+      <div class="topbar">
+        <button class="icon-btn topbar__back" type="button" id="backFromTerms" aria-label="Back"><i data-icon="back"></i></button>
+        <div class="topbar__title">
+          <span class="topbar__name">Terms &amp; Privacy</span>
+          <span class="topbar__sub">Last updated November 1, 2026</span>
+        </div>
+      </div>
+
+      <article class="legal">
+        <h1>Terms &amp; Conditions</h1>
+        <p class="legal__meta">Last updated: November 1, 2026</p>
+        <p>These terms cover your use of this website (nana-kojo.vercel.app), run by Asare Elvis Kojo (“I”, “me”). By using the site, you agree to them. If you don't agree, please don't use the site.</p>
+
+        <h2>1. About this site</h2>
+        <p>This is my personal portfolio. It shows my work, projects and writing, and ways to contact me. Everything here is for general information.</p>
+
+        <h2>2. Using the site</h2>
+        <p>You're welcome to browse, share links to and quote short parts of this site with credit. Please don't:</p>
+        <ul>
+          <li>copy, resell or republish the site or its content as your own;</li>
+          <li>try to break, overload or get unauthorised access to the site or the services it uses;</li>
+          <li>use the site for anything unlawful.</li>
+        </ul>
+
+        <h2>3. Messages (guestbook)</h2>
+        <ul>
+          <li>Messages you post are public and show the name you enter.</li>
+          <li>Keep it kind: no harassment, hate speech, spam, advertising, illegal content, or personal information about other people.</li>
+          <li>You're responsible for what you post. Don't post anything you wouldn't want to be public.</li>
+          <li>By posting, you let me display your message on this site. I may remove any message at any time, without notice.</li>
+        </ul>
+
+        <h2>4. My work and client projects</h2>
+        <ul>
+          <li>Projects marked as client work were built for those clients. Their names, logos and content belong to them and appear here as examples of my work.</li>
+          <li>Website previews are screenshots taken automatically and may not show the latest version of a site.</li>
+          <li>Prices on the Pricing page are starting prices, not fixed offers. The final price, scope and timeline for any project are agreed separately in a written quote.</li>
+          <li>Nothing on this site is an offer or a contract. Freelance and client work is agreed separately in writing.</li>
+        </ul>
+
+        <h2>5. Intellectual property</h2>
+        <p>Unless stated otherwise, the design, text and code of this site are © Asare Elvis Kojo. Third-party names, logos and trademarks — including X, GitHub, LinkedIn, Medium and WhatsApp — belong to their owners. This site's design is inspired by X (formerly Twitter), but it isn't affiliated with or endorsed by X Corp.</p>
+
+        <h2>6. Third-party services and links</h2>
+        <p>The site uses GitHub (activity graph), Medium (blog posts), MyMemory (bio translation), Microlink (website screenshots), Supabase (messages, once enabled) and Vercel (hosting). Links to other websites are there for convenience; I'm not responsible for their content or practices.</p>
+
+        <h2 id="privacy">7. Privacy Policy</h2>
+        <ul>
+          <li><strong>What I collect:</strong> only what you choose to post in Messages — your name, your message and when you posted it. There are no accounts, no ads and no analytics or tracking cookies.</li>
+          <li><strong>What stays in your browser:</strong> your theme, likes, reposts, bookmarks, guestbook name and a short cache of GitHub stats are saved in your browser's local storage. They never leave your device; clearing your browser data removes them.</li>
+          <li><strong>Third parties:</strong> when the page loads, your browser contacts the services listed above (for example GitHub's API), and they may log your IP address under their own privacy policies. Vercel keeps standard server logs. If you use Translate bio, the bio text is sent to MyMemory.</li>
+          <li><strong>Your choices:</strong> to have a message removed, or for any privacy question, email me at the address below.</li>
+        </ul>
+
+        <h2>8. No warranty</h2>
+        <p>The site is provided “as is”. I try to keep it accurate and online, but I can't promise it will always be error-free or available.</p>
+
+        <h2>9. Limitation of liability</h2>
+        <p>As far as the law allows, I'm not liable for any loss or damage arising from your use of this site or from relying on its content.</p>
+
+        <h2>10. Changes</h2>
+        <p>I may update these terms from time to time. The date at the top shows the latest version, and continuing to use the site means you accept the changes.</p>
+
+        <h2>11. Governing law</h2>
+        <p>These terms are governed by the laws of the Republic of Ghana.</p>
+
+        <h2>12. Contact</h2>
+        <p>Questions about these terms or your privacy? Email <a data-link="email" href="mailto:asareelvis200@gmail.com">asareelvis200@gmail.com</a>.</p>
+      </article>
+    </div>
+
     <footer class="column-footer">
       <a data-link="x" href="https://x.com/_asarekojo" target="_blank" rel="noopener">X</a>
       <a data-link="github" href="https://github.com/Nana-Kojoo" target="_blank" rel="noopener">GitHub</a>
       <a data-link="linkedin" href="https://linkedin.com/in/nana-kojo" target="_blank" rel="noopener">LinkedIn</a>
       <a data-link="whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
       <a data-link="email" href="mailto:asareelvis200@gmail.com">Email</a>
+      <a href="#/terms">Terms of Service</a>
+      <a href="#/privacy">Privacy Policy</a>
       <span>© <span data-year>2026</span> Asare Elvis Kojo · Built with curiosity in Accra</span>
     </footer>
   </main>
@@ -269,6 +357,12 @@
         <i data-icon="search" data-size="18"></i>
         <input type="search" id="searchInput" placeholder="Search projects" aria-label="Search projects" autocomplete="off">
       </form>
+
+      <section class="card card--hire" aria-labelledby="cardHireTitle">
+        <h2 class="card__title" id="cardHireTitle">Work with me</h2>
+        <p class="card__text">Websites and web apps for businesses — Basic, Advanced and Pro packages.</p>
+        <div class="card__actions"><a class="btn btn--invert" href="#/pricing">See pricing</a></div>
+      </section>
 
       <section class="card card--compose" aria-labelledby="cardMessageTitle">
         <h2 class="card__title" id="cardMessageTitle">Leave a message</h2>
@@ -339,7 +433,12 @@
         </div>
       </section>
 
-      <p class="rightbar__footer">© <span data-year>2026</span> Asare Elvis Kojo · Built with curiosity in Accra, Ghana</p>
+      <nav class="rightbar__footer" aria-label="Legal">
+        <a href="#/terms">Terms of Service</a>
+        <a href="#/privacy">Privacy Policy</a>
+        <a data-link="email" href="mailto:asareelvis200@gmail.com">Contact</a>
+        <span>© <span data-year>2026</span> Asare Elvis Kojo · Built with curiosity in Accra, Ghana</span>
+      </nav>
     </div>
   </aside>
 </div>
@@ -352,6 +451,7 @@
   <a href="#blogs" data-nav="blogs" aria-label="Blogs"><i data-icon="note" data-size="24"></i></a>
   <a href="#about" data-nav="about" aria-label="About"><i data-icon="user" data-size="24"></i></a>
   <a href="#/messages" data-nav="messages" aria-label="Messages"><i data-icon="mail" data-size="24"></i></a>
+  <a href="#/pricing" data-nav="pricing" aria-label="Pricing"><i data-icon="tag" data-size="24"></i></a>
 </nav>
 
 <button class="fab" type="button" data-open-contact aria-label="Contact me"><i data-icon="send" data-size="22"></i></button>
