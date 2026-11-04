@@ -111,6 +111,23 @@
       }
     },
     {
+      id: "wakefield",
+      name: "Wakefield Mines & Construction",
+      category: ["clients","web"],
+      status: "Launching soon",
+      date: "Nov 2026",
+      desc: "The web presence for Wakefield Mines & Construction, a contract mining and construction company in Accra.",
+      stack: ["HTML/CSS/JS"],
+      github: "https://github.com/Nana-Kojoo",
+      demo: "#",
+      image: "assets/shots/wakefield.jpg",
+      detail: {
+        overview: "Wakefield Mines & Construction is a contract mining and construction company based in Accra, Ghana. Its corporate website is on the way, starting with a launch page.",
+        built: "A bold launch page that introduces the brand and collects interest ahead of the full corporate website going live.",
+        features: "The company's branding over a full-screen mine-site photo, a \"Notify me\" sign-up for launch updates, and enquiry and location details."
+      }
+    },
+    {
       id: "moro-ai",
       name: "Moro AI",
       category: ["clients","web"],
@@ -257,7 +274,7 @@
       company: "Freelance",
       role: "Web & Software Development",
       date: "2025 – Present",
-      desc: "Websites, internal tools, and the occasional API for local clients. Recent client sites include <a class=\"hashlink\" href=\"https://www.lawsofbeautyacademy.com/\" target=\"_blank\" rel=\"noopener\">Laws of Beauty Academy</a> and <a class=\"hashlink\" href=\"https://moro-ai.onrender.com/\" target=\"_blank\" rel=\"noopener\">Moro AI</a>.",
+      desc: "Websites, internal tools, and the occasional API for local clients. Recent client sites include <a class=\"hashlink\" href=\"https://www.lawsofbeautyacademy.com/\" target=\"_blank\" rel=\"noopener\">Laws of Beauty Academy</a>, Wakefield Mines & Construction and <a class=\"hashlink\" href=\"https://moro-ai.onrender.com/\" target=\"_blank\" rel=\"noopener\">Moro AI</a>.",
       tags: ["React","Flask"],
       quote: { type: "project", id: "laws-of-beauty" }
     },
@@ -522,6 +539,9 @@
   // A live screenshot of the project's site (via /api/shot, refreshed every
   // 12 hours), falling back to the saved image; or a branded cover if there's no site.
   function projectMedia(p){
+    if(p.image && !(p.demo && p.demo !== '#')){
+      return '<img class="shot" src="' + p.image + '" alt="Screenshot of the ' + p.name + ' website" width="1200" height="675" loading="lazy" decoding="async">';
+    }
     if(p.image){
       return '<img class="shot" src="/api/shot?id=' + p.id + '"' +
         ' onerror="this.onerror=null;this.src=\'' + p.image + '\'"' +
@@ -547,6 +567,12 @@
   }
   function siteUrl(p){
     return p.demo && p.demo !== '#' ? p.demo : p.github;
+  }
+  // Domain shown on cards; client sites that aren't public yet say so instead.
+  function siteLabel(p){
+    var live = p.demo && p.demo !== '#';
+    if(!live && p.category.indexOf('clients') !== -1) return 'Website coming soon';
+    return hostOf(siteUrl(p));
   }
   function hostOf(url){
     return url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
@@ -669,7 +695,7 @@
     return '<a class="link-card" href="#/project/' + p.id + '">' +
       '<div class="link-card__media">' + projectMedia(p) + '</div>' +
       '<div class="link-card__body">' +
-        '<span class="link-card__domain">' + hostOf(siteUrl(p)) + '</span>' +
+        '<span class="link-card__domain">' + siteLabel(p) + '</span>' +
         '<span class="link-card__title">' + p.name + ' ' + statusPill(p.status) + '</span>' +
         (p.stack.length ? '<span class="link-card__desc">' + p.stack.join(' · ') + '</span>' : '') +
       '</div>' +
@@ -1529,7 +1555,7 @@
         '<span class="client-row__thumb" aria-hidden="true">' + projectMedia(p) + '</span>' +
         '<span class="client-row__body">' +
           '<span class="client-row__name">' + p.name + '</span>' +
-          '<span class="client-row__host">' + hostOf(siteUrl(p)) + '</span>' +
+          '<span class="client-row__host">' + siteLabel(p) + '</span>' +
         '</span>' +
         statusPill(p.status) +
       '</a>';
